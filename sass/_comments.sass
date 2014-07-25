@@ -1,0 +1,131 @@
+.select
+	font-size: 11px 
+	color: #CCCCCC 
+	position: relative
+	display: inline-block
+	select
+		opacity: 0
+		-webkit-appearance: none
+		z-index: 1
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%     
+		
+	i
+		+svg(arr, 10, 6)
+		vertical-align: middle
+		margin-left: 6px 
+
+.comments
+	background: #1C1C1C 
+	+full
+	overflow: auto
+.commentsmeta
+	.commentsmeta__search
+	.commentsmeta__new
+
+
+.thread
+	margin-bottom: 45px 
+	position: relative
+	padding: 0 20px 0 20px 
+	&:before
+		position: absolute
+		left: 0
+		top: 0
+		height: 100%   
+		width: 2px 
+		background: #444444
+		content: ' '
+	&:hover
+		&:before
+			background: #fff 
+	&.is-new
+		&:before
+			background: #A3D136 
+
+.comment
+	margin-bottom: 25px 
+	.comment__meta
+		+clr
+		color: #777777 
+		margin-bottom: 7px 
+	.comment__av
+		width: 40px 
+		height: 40px 
+		border-radius: 40px
+		border: 2px solid #fff
+		float: left
+		margin-right: 7px 
+		box-shadow: inset 0 1px 1px rgba(#000, .3)
+	.comment__mail
+		font-size: 13px 
+		padding-top: 2px 
+	.comment__date
+		font-size: 11px 
+		margin-top: 3px 
+	.comment__content
+		font-size: 13px 
+		line-height: 18px
+		color: #CCCCCC
+		+clr
+		img
+			float: left
+			margin-right: 12px 
+	&.is-author
+		.comment__av
+			border-color: #A3D136 
+.addcomment
+	display: block
+	position: relative
+	&.addcomment_main
+		margin: 13px 20px 20px 20px 
+	textarea
+		border-style: none
+		background: #333333 
+		border-bottom: 1px solid #999 
+		padding: 5px 
+		width: 100%
+		min-height: 32px 
+		line-height: 22px 
+		+box
+		color: #CCCCCC
+		display: block
+		padding-right: 50px 
+		font-size: 13px   
+	.addcomment__icon
+		position: absolute
+		right: 10px
+		top: 8px 
+		+svg(comment,27,20)
+	&.is-green
+		.addcomment__icon
+			+svg(comments1,27,20)
+.commentsmeta
+	+clr
+	margin-bottom: 20px 
+	margin-left: 20px 
+	margin-right: 20px 
+	.commentsmeta__new
+		cursor: pointer
+		font-weight: bold
+		font-size: 11px 
+		color: #A2D321 
+		i
+			+svg(refresh,14,19)
+			width: 15px 
+			height: 18px 
+			margin-right: 5px 
+			position: relative
+			top: -3px 
+			vertical-align: middle
+	.commentsmeta__search
+		float: right
+		+svg(search,16,16)
+	.select
+		float: right
+		margin-right: 20px 
+		position: relative
+		top: 1px 
+			

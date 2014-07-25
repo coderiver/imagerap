@@ -1,0 +1,143 @@
+=full
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0    
+.top
+	+full
+	background: #242526
+	 
+	.top__ci
+		position: absolute
+		left: 11px 
+		top: 6px 
+		+svg(ci,21,21) 
+	.top__logo
+		position: absolute
+		top: 7px 
+		left: 54px 
+		background: red 
+		+svg(logo,20,18)
+.users
+	position: absolute
+	top: 0 
+	right: 10px
+	ul
+		list-style: none
+		li
+			display: inline-block
+			position: relative
+		
+	a
+		font-size: 11px 
+		color: #CCCCCC
+		text-decoration: none
+		margin-left: 24px  
+		display: inline-block
+		height: 32px
+		line-height: 32px
+		+transition(all .2s linear)
+		&:hover
+			color: #fff 
+	.users__new
+		position: relative
+		top: -2px 
+		i
+			+svg(users,26,26)
+			vertical-align: middle
+		span
+			vertical-align: middle
+			display: inline-block
+			color: #fff 
+			font-weight: bold
+			margin-left: 4px 
+.users__drop
+	position: absolute
+	right: 6px 
+	top: 39px 
+	width: 367px 
+	background: #000000
+	border-radius: 6px 
+	display: none
+	&.is-active
+		display: block
+	&:before
+		width: 10px 
+		height: 10px 
+		top: -5px 
+		right: 13px 
+		background: #777777
+		content: ' ' 
+		position: absolute
+		+transform(rotate(45deg))
+.disqus
+	background: #777777
+	border-top-left-radius: 6px 
+	border-top-right-radius: 6px 
+	padding: 10px 10px 10px 13px
+	.disqus__icon
+		+svg(disqus, 39, 36)
+		float: left
+		margin-right: 20px 
+	.disqus__content
+		// /overflow: hidden
+		display: table
+	.disqus__title
+		font-size: 18px 
+		color: #fff
+		margin-bottom: 5px 
+		line-height: 1 
+	.disqus__started
+		font-size: 11px 
+		color: #000
+		display: inline-block
+	.disqus__sort
+		font-size: 11px 
+		color: #CCCCCC
+		position: relative
+		cursor: pointer
+		display: inline-block
+		margin-left: 10px 
+		vertical-align: middle
+		top: -1px 
+		select
+			opacity: 0
+			-webkit-appearance: none
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			z-index: 1     
+		i
+			+svg(arr, 10, 6)
+			vertical-align: middle
+			margin-left: 4px 
+.u
+	padding: 10px 
+	cursor: pointer
+	+clr
+	&:hover
+		background: rgba(#fff,.1) 
+	&:first-child
+		padding-top: 14px 
+	&:last-child
+		padding-bottom: 14px 
+		border-bottom-left-radius: 6px
+		border-bottom-right-radius: 6px
+	.u__av
+		float: left
+		width: 40px 
+		height: 40px 
+		border-radius: 40px
+		border: 2px solid #fff
+		margin-right: 11px  
+	.u__content
+		overflow: hidden
+		.u__email
+			font-size: 13px 
+			color: #CCCCCC
+		.u__joined
+			font-size: 11px 
+			color: #777777
+			margin-top: 3px  

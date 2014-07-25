@@ -1,0 +1,60 @@
+.files
+	+full
+	padding: 12px 15px 10px 36px
+	.files__title
+		font-size: 13px 
+		text-transform: uppercase
+		color: #CCCCCC 
+		line-height: 1
+		margin-bottom: 5px 
+	.files__meta
+		margin-bottom: 28px 
+		.btn
+			margin-right: 6px 
+	.files__get
+		display: inline-block
+		border-bottom: 1px solid #777 
+		height: 28px 
+		line-height: 28px 
+		padding-left: 22px 
+		.files__search
+			+svg(search,16,16)
+			margin-left: 5px 
+			position: relative
+			top: 2px 
+			cursor: pointer
+		
+.file
+	+clr
+	display: block
+	text-decoration: none 
+	margin-bottom: 35px 
+	color: #999999 
+	.file__pic
+		float: left
+		margin-right: 15px 
+		img
+			display: block
+	.file__content
+		overflow: hidden
+	h4
+		font-weight: normal
+		font-size: 13px 
+		color: #999999
+		font-weight: normal
+		margin-bottom: 3px 
+		display: block
+	.file__date,.file__comments
+		font-size: 11px 
+		color: #777777 
+		margin-bottom: 11px 
+		line-height: 1 
+	&:hover
+		.file__pic
+			position: relative
+			&:before
+				+full
+				content: ' '
+				border: 2px solid #50B7E0 
+		h4
+			color: #50B7E0 

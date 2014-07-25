@@ -1,0 +1,209 @@
+.tools
+	background: #242526
+	text-align: center
+	+full
+	padding-top: 17px 
+	.tool
+		margin-bottom: 25px 
+		cursor: pointer
+		position: relative
+	.t-pencil
+		+svg(tpencil, 26,26)
+		&.is-active,&:hover
+			+svg(tpencilh, 26,26)
+	.t-line
+		+svg(tline, 24,24)
+		&.is-active,&:hover
+			+svg(tlineh, 24,24)
+	.t-rect
+		+svg(trect, 24,24)
+		&.is-active,&:hover
+			+svg(trecth, 24,24)
+	.t-circle
+		+svg(tcircle, 24,24)
+		&.is-active,&:hover
+			+svg(tcircleh, 24,24)
+	.t-crop
+		+svg(tcrop, 29,27)
+		&.is-active,&:hover
+			+svg(tcroph, 29,27)
+	.t-arrow
+		+svg(tarrow, 24,24)
+		&.is-active,&:hover
+			+svg(tarrowh, 24,24)
+	.t-search
+		+svg(tsearch, 24,24)
+		&.is-active,&:hover
+			+svg(tsearchh, 24,24)
+	.t-canvas
+		+svg(tcanvas, 24,24)
+		&.is-active,&:hover
+			+svg(tcanvash, 24,24)
+	.t-brush
+		display: block
+		padding-left: 5px 
+		height: 24px 
+		line-height: 24px
+		color: #000  
+		text-align: left
+		position: relative
+		margin: 0 12px 
+		&:before
+			+svg(blackarrow,9,5)
+			content: ' '
+			position: absolute
+			right: 5px 
+			top: 50%
+			margin-top: -3px  
+	.tools__bottom
+		width: 100%
+		position: absolute
+		left: 0
+		bottom: 14px
+		padding-bottom: 14px
+		text-align: center
+		.btn
+			margin-top: 11px 
+		.is-two &
+			padding-bottom: 0
+			bottom: 0  
+			.zoom
+				margin-left: 10px 
+	.notesandmarks
+		margin: 20px 0 
+		font-size: 11px  
+		color: #777777
+		cursor: pointer
+		text-align: center
+		i
+			+svg(hidden,25,19)
+			position: relative
+			top: 0 
+		&.is-active 
+
+			i
+				+svg(visible,25,13)
+				top: 3px 
+	.link
+		+svg(link,35,13)
+		margin: 10px 0
+		cursor: pointer
+		&.is-active 
+			+svg(linka,35,13)
+
+.btn
+	background: #111212
+	border: 1px solid #333  
+	width: 50px 
+	display: inline-block
+	height: 29px 
+	line-height: 29px
+	font-size: 11px  
+	color: #CCCCCC
+	text-align: center
+	text-decoration: none 
+	&.btn_small
+		height: 28px 
+		line-height: 28px
+		color: #73736F
+		border-color: #262626   
+		background: #131313
+		padding: 0 7px
+		width: auto 
+		&:hover
+			background: #0C0C0C
+			color: #CCCCCC
+	
+			  
+.zoom
+	width: 20px 
+	height: 150px 
+	position: relative
+	margin-bottom: 20px 
+	.zoom__in
+		+svg(zoomin,15,8)
+		position: absolute
+		top: -14px 
+		left: 23px
+	.zoom__out
+		+svg(zoomout,14,8)
+		position: absolute
+		bottom: -14px 
+		left: 23px
+	.zoom__range
+		overflow: hidden
+		width: 50px 
+		position: relative
+		height: 150px  
+input[type=range].vertical
+	position: absolute
+	left: 6px
+	+rotate(90)
+	+transform-origin(0,0)
+	writing-mode: bt-lr
+	-webkit-appearance: slider-vertical
+	// border: 1px solid #474747 
+	height: 2px
+	width: 150px
+	background: #777777 
+	-webkit-appearance: none
+	border-radius: 10px
+	display: block
+	margin-left: 28px 
+	&:focus
+		outline: none
+	&::-webkit-slider-thumb
+		-webkit-appearance: none
+		height: 10px 
+		width: 10px 
+		border-radius: 10px
+		// border: 1px solid rgba(204,204,204,.6)
+		// +box-shadow(1px 2px 5px rgba(0,0,0,.8))
+		// +background-image(linear-gradient(bottom, #000 0, rgba(54,54,54,0) 100%))  
+		position: relative
+		&:before
+			content: ' '
+			position: absolute
+			width: 150px 
+			height: 4px 
+			background: #CCCCCC 
+			bottom: 3px
+			left: 2px 
+
+.brushes
+	position: absolute
+	right: 8px
+	width: 166px  
+	top: 35px 
+	background: #000 
+	border-radius: 6px
+	padding: 7px 7px 1px 7px
+	z-index: 10 
+	display: none
+	&.is-active
+		display: block
+
+	&:before
+		width: 10px 
+		height: 10px 
+		top: -5px 
+		right: 13px 
+		background: #000
+		content: ' ' 
+		position: absolute
+		+transform(rotate(45deg))
+	.brushes__color
+		width: 50px 
+		height: 24px 
+		float: left
+		margin-bottom: 8px 
+		margin-right: 8px 
+		&:nth-child(3n)
+			margin-right: 0 
+		&:hover
+			box-shadow: 0 0 0 3px #fff
+	.brushes__thick
+		padding-top: 7px 
+		clear: both
+	
+	

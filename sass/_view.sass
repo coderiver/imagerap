@@ -1,0 +1,118 @@
+.pic
+	+full
+	overflow: auto
+	text-align: center
+
+.preview
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 200px   
+	height: 285px 
+	z-index: 10 
+	+transition(transform .2s ease)
+	&.preview_big
+		width: 430px 
+		.preview__1,.preview__2
+			width: 200px 
+			height: 285px 
+			float: left
+			position: relative
+	.preview__zoom
+		width: 30px 
+		float: left
+		height: 285px 
+		background: #0A0B0B 
+		position: relative
+		&.is-inside
+			background: rgba(#000, .5) 
+			position: absolute
+			right: 0
+			bottom: 0  
+			z-index: 20
+			+box
+			padding-top: 5px 
+		.zoom
+			height: 220px + 20px
+			position: absolute
+			left: -18px
+			top: 20px
+			.zoom__range
+				height: 230px  + 10px
+			input
+				width: 220px + 20px 
+				&::-webkit-slider-thumb:before
+					width: 320px 
+	.preview__meta
+		position: absolute
+		height: 24px 
+		top: -60px 
+		+box
+		padding-left: 5px  
+		border-bottom: 1px solid #777777
+		width: 100%
+		background: #242526 
+	.notesandmarks
+		position: absolute
+		left: 200px 
+		top: 3px
+		font-size: 11px  
+		color: #777777
+		cursor: pointer
+		padding-left: 32px 
+		i
+			+svg(hidden,25,19)
+			position: absolute
+			left: 0 
+			top: -2px 
+		&.is-active 
+			i
+				top: 1px
+				+svg(visible,25,13)
+		 
+	.preview__area
+		+full
+		border: 2px solid #F7E53B
+		cursor: move 
+		z-index: 3 
+	.preview__title,.preview__showpreview
+		position: absolute
+		+box
+		padding: 0 5px
+		height: 30px 
+		line-height: 30px
+		overflow: hidden
+		-ms-text-overflow: ellipsis
+		text-overflow: ellipsis 
+		font-size: 11px 
+		color: #999994
+		background: #171717
+		top: -30px   
+		width: 100% 
+		z-index: 1 
+		cursor: pointer
+		i
+			+svg(check,12,10)
+			vertical-align: middle
+			margin-right: 5px 
+			position: relative
+			top: -2px 
+	.preview__showpreview
+		+transform(translate(0, 30px))
+		+transition(all .2s ease)
+		display: none
+	img
+		z-index: 2
+		position: absolute
+		left: 0
+		top: 0   
+	&.is-hidden
+		+transform(translate(0,285px))
+		.preview__showpreview
+			display: block
+		&:hover
+			.preview__showpreview
+				+transform(translate(0, 0))
+				
+
+		

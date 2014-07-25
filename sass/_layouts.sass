@@ -1,0 +1,128 @@
+body
+	position: relative
+	min-width: 1000px 
+	min-height: 600px 
+	
+.l-top
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	height: 32px 
+	z-index: 20 
+.l-middle
+	position: absolute
+	top: 32px 
+	bottom: 0
+	left: 0
+	right: 0   
+.l-files
+	background: #1A1A1A 
+	width: 353px  
+	+transform(translate(-353px, 0))
+	+transition(all .2s ease)
+	position: absolute
+	left: 0
+	top: 0
+	bottom: 0
+	z-index: 100
+	.l-files__toggle
+		position: absolute
+		top: 12px     
+		left: 0
+		width: 30px
+		height: 48px   
+		background: #000 
+		cursor: pointer
+		z-index: 101 
+		&:before
+			position: absolute
+			left: 50%
+			top: 50%
+			+svg(arrv,7,7)  
+			content: ' '
+			margin-top: -4px 
+			margin-left: -4px 
+			+transform(rotate(180deg))
+
+	&.is-visible
+		+transform(translate(0, 0))
+.l-comments
+	position: absolute
+	right: 0 
+	width: 346px 
+	right: 0 
+	top: 0
+	bottom: 0  
+	+transition(all .2s linear)
+	.l-comments__toggle
+		position: absolute
+		width: 14px 
+		height: 30px 
+		left: -14px 
+		top: 0
+		background: #1C1C1C
+		border-top-left-radius: 3px  
+		border-bottom-left-radius: 3px  
+		cursor: pointer
+		&:before
+			position: absolute
+			left: 50%
+			top: 50%
+			+svg(arrv,7,7)  
+			content: ' '
+			margin-top: -4px 
+			margin-left: -4px 
+	.is-commentshidden &
+		+transform(translate(346px,0))
+		.l-comments__toggle
+			&:before
+				+transform(rotate(180deg))
+
+.l-view
+	position: absolute
+	left: 0
+	top: 0
+	right: 346px
+	bottom: 0   
+	+transition(all .2s linear)
+	overflow: hidden
+	background: #242526 
+	.is-commentshidden &
+		right: 0 
+.l-tools
+	position: absolute
+	right: 0
+	top: 0
+	bottom: 0
+	width: 70px   
+	.is-one &
+		display: none
+	.is-two &
+		position: absolute
+		left: 50%
+		top: 0
+		bottom: 0
+		right: auto
+		margin-left: -80px  
+		width: 80px  
+		display: block
+		opacity: 0  
+		z-index: 900
+	.is-two.is-centertools &
+		opacity: 1
+	
+.is-one
+	.l-comments
+		display: none
+	.l-view
+		right: 0 
+.is-two
+	.l-view
+		width: 50%
+	.l-view_1
+		right: auto 
+		+box
+		border-right: 2px solid #242526 
+	.l-view_2
+		left: auto 
