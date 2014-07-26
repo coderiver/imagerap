@@ -202,8 +202,8 @@ input[type=range].vertical::-webkit-slider-thumb:before { content: " "; position
 
 .brushes { position: absolute; right: 8px; width: 166px; top: 35px; background: black; border-radius: 6px; padding: 7px 7px 1px 7px; z-index: 10; display: none; }
 .brushes.is-active { display: block; }
-.brushes:before { width: 10px; height: 10px; top: -5px; right: 13px; background: black; content: " "; position: absolute; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
-.brushes .brushes__color { width: 50px; height: 24px; float: left; margin-bottom: 8px; margin-right: 8px; }
+.brushes:before { width: 10px; height: 10px; top: -5px; right: 13px; background: black; content: " "; position: absolute; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); z-index: 1; }
+.brushes .brushes__color { width: 50px; height: 24px; float: left; margin-bottom: 8px; margin-right: 8px; position: relative; z-index: 20; }
 .brushes .brushes__color:nth-child(3n) { margin-right: 0; }
 .brushes .brushes__color:hover, .brushes .brushes__color.is-active { box-shadow: 0 0 0 3px white; }
 .brushes .brushes__thick { padding-top: 7px; clear: both; }

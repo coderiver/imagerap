@@ -11,6 +11,15 @@ head.ready(function() {
 		$(this).addClass('is-active');
 		setcolor(activecolor);
 	});
+	$('.tool_color').hover(function() {
+		if(!$(this).hasClass('is-active')){
+			$(this).children('div').children('svg').children('g').children('path').css('fill', activecolor);
+		}
+	}, function() {
+		if(!$(this).hasClass('is-active')){
+			$(this).children('div').children('svg').children('g').children('path').css('fill', '#777777');
+		}	
+	});
 
 	function setcolor(color){
 		activecolor = color;

@@ -175,12 +175,15 @@ input[type=range].vertical
 		content: ' ' 
 		position: absolute
 		+transform(rotate(45deg))
+		z-index: 1 
 	.brushes__color
 		width: 50px 
 		height: 24px 
 		float: left
 		margin-bottom: 8px 
 		margin-right: 8px 
+		position: relative
+		z-index: 20 
 		&:nth-child(3n)
 			margin-right: 0 
 		&:hover,&.is-active
