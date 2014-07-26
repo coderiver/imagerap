@@ -10,7 +10,9 @@ $icons: sprite-map("icons/*.png", $spacing: 10px)
 =image-sizer($path)
 	width: image-width($path) / 2
 	height: image-height($path) / 2
-
+=size($w,$h)
+	width: $w + px
+	height: $h + px
 =sized-sprite($map, $sprite)
 	background: sprite($map, $sprite) no-repeat
 	+image-size(sprite-file($map, $sprite))

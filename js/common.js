@@ -1,4 +1,24 @@
 head.ready(function() {
+	var activecolor = '#7DE5D2';
+	$('.brushes__color').click(function(event) {
+		$('.brushes__color').removeClass('is-active');
+		$(this).addClass('is-active');
+		setcolor($(this).data('color'));
+	});
+
+	$('.tool_color').click(function(event) {
+		$('.tool_color').removeClass('is-active');
+		$(this).addClass('is-active');
+		setcolor(activecolor);
+	});
+
+	function setcolor(color){
+		activecolor = color;
+		$('.tool_color>div>svg').children('g').children('path').css('fill', '#777777');
+		$('.is-active>div>svg').children('g').children('path').css('fill', activecolor);
+		$('.t-brush').css('background',activecolor);
+	}
+
 	$('[data-step]').on('click', function(){
 
 		var range = $(this).parent().children('.zoom__range').children('input');

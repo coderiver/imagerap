@@ -7,38 +7,24 @@
 		margin-bottom: 25px 
 		cursor: pointer
 		position: relative
+	.tool>div
+		margin: 0 auto 
 	.t-pencil
-		+svg(tpencil, 26,26)
-		&.is-active,&:hover
-			+svg(tpencilh, 26,26)
+		+size(26,26)
 	.t-line
-		+svg(tline, 24,24)
-		&.is-active,&:hover
-			+svg(tlineh, 24,24)
+		+size(24,24)
 	.t-rect
-		+svg(trect, 24,24)
-		&.is-active,&:hover
-			+svg(trecth, 24,24)
+		+size(24,24)
 	.t-circle
-		+svg(tcircle, 24,24)
-		&.is-active,&:hover
-			+svg(tcircleh, 24,24)
+		+size(24,24)
 	.t-crop
-		+svg(tcrop, 29,27)
-		&.is-active,&:hover
-			+svg(tcroph, 29,27)
+		+size(29,27)
 	.t-arrow
-		+svg(tarrow, 24,24)
-		&.is-active,&:hover
-			+svg(tarrowh, 24,24)
+		+size(24,24)
 	.t-search
-		+svg(tsearch, 24,24)
-		&.is-active,&:hover
-			+svg(tsearchh, 24,24)
+		+size(24,24)
 	.t-canvas
-		+svg(tcanvas, 24,24)
-		&.is-active,&:hover
-			+svg(tcanvash, 24,24)
+		+size(24,24)
 	.t-brush
 		display: block
 		padding-left: 5px 
@@ -47,7 +33,7 @@
 		color: #000  
 		text-align: left
 		position: relative
-		margin: 0 12px 
+		margin: 0 12px !important
 		&:before
 			+svg(blackarrow,9,5)
 			content: ' '
@@ -197,10 +183,12 @@ input[type=range].vertical
 		margin-right: 8px 
 		&:nth-child(3n)
 			margin-right: 0 
-		&:hover
+		&:hover,&.is-active
 			box-shadow: 0 0 0 3px #fff
 	.brushes__thick
 		padding-top: 7px 
 		clear: both
-	
-	
+
+
+// .tools svg g path
+// 	fill: red
