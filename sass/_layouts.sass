@@ -90,12 +90,20 @@ body
 	background: #242526 
 	.is-commentshidden &
 		right: 0 
+	.l-view__wrap
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0    
+		+transition(all .2s ease)
 .l-tools
 	position: absolute
 	right: 0
 	top: 0
 	bottom: 0
 	width: 70px   
+	+gpu
 	.is-one &
 		display: none
 	.is-two &
@@ -104,13 +112,20 @@ body
 		top: 0
 		bottom: 0
 		right: auto
-		margin-left: -80px  
+		margin-left: -40px  
 		width: 80px  
 		display: block
 		opacity: 0  
 		z-index: 900
 	.is-two.is-centertools &
 		opacity: 1
+.is-two.is-centertools
+	.l-view_1
+		.l-view__wrap
+			right: 40px 
+	.l-view_2
+		.l-view__wrap
+			left: 40px 		
 	
 .is-one
 	.l-comments

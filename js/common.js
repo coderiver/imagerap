@@ -36,7 +36,8 @@ head.ready(function() {
 		b.toggleClass('is-commentshidden');
 	});
 	$('.preview__title,.preview__showpreview').click(function(event) {
-		$('.preview').toggleClass('is-hidden');
+		$(this).parents('.preview').toggleClass('is-hidden');
+		// $('.preview').toggleClass('is-hidden');
 	});
 
 	$('.t-brush').click(function(event) {

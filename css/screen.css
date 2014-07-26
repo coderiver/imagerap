@@ -42,11 +42,15 @@ body { position: relative; min-width: 1000px; min-height: 600px; }
 
 .l-view { position: absolute; left: 0; top: 0; right: 346px; bottom: 0; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; overflow: hidden; background: #242526; }
 .is-commentshidden .l-view { right: 0; }
+.l-view .l-view__wrap { position: absolute; top: 0; left: 0; bottom: 0; right: 0; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; transition: all 0.2s ease; }
 
-.l-tools { position: absolute; right: 0; top: 0; bottom: 0; width: 70px; }
+.l-tools { position: absolute; right: 0; top: 0; bottom: 0; width: 70px; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .is-one .l-tools { display: none; }
-.is-two .l-tools { position: absolute; left: 50%; top: 0; bottom: 0; right: auto; margin-left: -80px; width: 80px; display: block; opacity: 0; z-index: 900; }
+.is-two .l-tools { position: absolute; left: 50%; top: 0; bottom: 0; right: auto; margin-left: -40px; width: 80px; display: block; opacity: 0; z-index: 900; }
 .is-two.is-centertools .l-tools { opacity: 1; }
+
+.is-two.is-centertools .l-view_1 .l-view__wrap { right: 40px; }
+.is-two.is-centertools .l-view_2 .l-view__wrap { left: 40px; }
 
 .is-one .l-comments { display: none; }
 .is-one .l-view { right: 0; }
@@ -236,4 +240,5 @@ input[type=range].vertical::-webkit-slider-thumb:before { content: " "; position
 .showtools i, .hidetools i { background: url("../img/icons/arr.svg") no-repeat 0 0; -moz-background-size: 10px 6px 100%; -webkit-background-size: 10px 6px 100%; background-size: 10px 6px 100%; width: 10px; height: 6px; display: inline-block; -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -ms-transform: rotate(-180deg); -o-transform: rotate(-180deg); transform: rotate(-180deg); margin-right: 4px; }
 
 .hidetools { position: static; width: auto; text-align: center; background: transparent; margin: 0; }
+.hidetools i { -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); }
 .is-centertools .hidetools { display: block; }
