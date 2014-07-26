@@ -1,5 +1,28 @@
 head.ready(function() {
+	$('[data-step]').on('click', function(){
 
+		var range = $(this).parent().children('.zoom__range').children('input');
+		console.log(range);
+        var step = $(this).data('step');
+        var stepped;
+        try {
+        	vvv = parseInt(range.val()) + parseInt(step);
+            range.val(vvv);
+            stepped = true;
+        } catch(e){}
+        if(stepped){
+            range
+                .trigger('input')
+                .trigger('change');
+
+        }
+        return false;
+    });
+
+    $('.zoom__range input').change(function(event) {
+    	scale = $(this).val();
+    	$('.pic__wrap').css('transform', 'scale('+scale+')');
+    });
 	// $(document).on("click", function(){
 	// 	$(".js-popup").hide();
 	// });
@@ -33,5 +56,4 @@ head.ready(function() {
 	$('.link').click(function(event) {
 		$(this).toggleClass('is-active');
 	});
-	console.log($('body').html());
 });

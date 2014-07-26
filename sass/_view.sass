@@ -100,7 +100,20 @@
 	.preview__showpreview
 		+transform(translate(0, 30px))
 		+transition(all .2s ease)
-		display: none
+		span
+			display: inline
+		span+span
+			display: none
+	&.is-hidden
+		.preview__showpreview
+			span
+				display: none
+			span+span
+				display: inline
+	.preview__wraptitle
+		&:hover
+			.preview__showpreview
+				+transform(translate(0, 0))
 	img
 		z-index: 2
 		position: absolute
@@ -108,11 +121,7 @@
 		top: 0   
 	&.is-hidden
 		+transform(translate(0,285px))
-		.preview__showpreview
-			display: block
-		&:hover
-			.preview__showpreview
-				+transform(translate(0, 0))
+		
 				
 
 		
