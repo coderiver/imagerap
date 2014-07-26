@@ -52,23 +52,7 @@
 		border-bottom: 1px solid #777777
 		width: 100%
 		background: #242526 
-	.notesandmarks
-		position: absolute
-		left: 200px 
-		top: 3px
-		font-size: 11px  
-		color: #777777
-		cursor: pointer
-		padding-left: 32px 
-		i
-			+svg(hidden,25,19)
-			position: absolute
-			left: 0 
-			top: -2px 
-		&.is-active 
-			i
-				top: 1px
-				+svg(visible,25,13)
+	
 		 
 	.preview__area
 		+full
@@ -122,6 +106,27 @@
 	&.is-hidden
 		+transform(translate(0,285px))
 		
-				
+
+
+.notesandmarks
+	position: absolute
+	left: 200px 
+	top: 3px
+	font-size: 11px  
+	color: #777777
+	cursor: pointer
+	padding-left: 32px 
+	i
+		+svg(hidden,25,19)
+		position: absolute
+		left: 0 
+		&.is-state1
+			+svg(hidden,25,19)
+		&.is-state2
+			+svg(visible,25,13)	
+			top: 3px 
+		&.is-state3
+			+svg(visiblehidden,25,13)	
+			top: 3px 	
 
 		

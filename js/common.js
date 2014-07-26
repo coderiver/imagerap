@@ -49,7 +49,11 @@ head.ready(function() {
 	});
 
 	$('.notesandmarks').click(function(event) {
-		$(this).toggleClass('is-active');
+		// $(this).toggleClass('is-active');
+		var classes = ['is-state1','is-state2','is-state3'];
+		$('.notesandmarks i').each(function(){
+			this.className = classes[($.inArray(this.className, classes)+1)%classes.length];
+		});
 	});
 	$('.showtools,.hidetools').click(function(event) {
 		b.toggleClass('is-centertools');

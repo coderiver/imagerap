@@ -183,8 +183,10 @@
 			
 			<!-- begin preview  -->
 			<div class="preview" >
-				<div class="preview__title">Somelongname.tiff</div>
-				<div class="preview__showpreview">Show miniature</div>
+				<div class="preview__wraptitle">
+					<div class="preview__title">Somelongname.tiff</div>
+					<div class="preview__showpreview"><span>Hide</span><span>Show</span> miniature</div>
+				</div>
 				<img src="img/small.jpg" alt="">
 				<div class="preview__area"></div>
 				<div class="preview__zoom is-inside">
@@ -215,8 +217,10 @@
 			
 			<!-- begin preview  -->
 			<div class="preview" >
-				<div class="preview__title">Somelongname.tiff</div>
-				<div class="preview__showpreview">Show miniature</div>
+				<div class="preview__wraptitle">
+					<div class="preview__title">Somelongname.tiff</div>
+					<div class="preview__showpreview"><span>Hide</span><span>Show</span> miniature</div>
+				</div>
 				<img src="img/small.jpg" alt="">
 				<div class="preview__area"></div>
 				<div class="preview__zoom is-inside">
@@ -278,9 +282,9 @@
 			<div class="tools__bottom">
 				<div class="zoom">
 					<div class="zoom__wrap">
-						<div class="zoom__in"></div>
-						<div class="zoom__range"><input type="range" class="vertical"></div>
-						<div class="zoom__out"></div>
+						<div class="zoom__in" data-step="1"></div>
+						<div class="zoom__range"><input value="1" type="range" min="1" max="10" class="vertical"></div>
+						<div class="zoom__out" data-step="-1"></div>
 					</div>
 				</div>
 				<div class="link"></div>
