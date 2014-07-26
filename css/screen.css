@@ -231,7 +231,7 @@ input[type=range].vertical::-webkit-slider-thumb:before { content: " "; position
 .file:hover .file__pic:before { position: absolute; top: 0; left: 0; right: 0; bottom: 0; content: " "; border: 2px solid #50b7e0; }
 .file:hover h4 { color: #50b7e0; }
 
-.pic__wrap { display: inline-block; position: relative; }
+.pic__wrap { display: inline-block; position: relative; -webkit-transition: all 0.1s linear; -moz-transition: all 0.1s linear; -o-transition: all 0.1s linear; transition: all 0.1s linear; }
 .pic__wrap .pic__area { position: absolute; border: 2px solid black; background: green; }
 .pic__wrap .pic__area .pic__areadrag { background: url("../img/icons/area.svg") no-repeat 0 0; -moz-background-size: 44px 44px 100%; -webkit-background-size: 44px 44px 100%; background-size: 44px 44px 100%; width: 44px; height: 44px; display: inline-block; position: absolute; bottom: -22px; left: -22px; cursor: move; }
 
