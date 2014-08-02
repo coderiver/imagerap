@@ -25,8 +25,15 @@ head.ready(function() {
 		activecolor = color;
 		$('.tool_color>div>svg').children('g').children('path').css('fill', '#777777');
 		$('.is-active>div>svg').children('g').children('path').css('fill', activecolor);
+		$('.brushes__fill>svg').children('g').children('g').css('fill', activecolor);
 		$('.t-brush').css('background',activecolor);
 	}
+
+	$(".brushes__fill").css('width', $('.brushes__brush').val()+'%');
+	$('.brushes__brush').on("change mousemove", function() {
+	    $(".brushes__fill").css('width', $(this).val()+'%');
+	    $('.brushes__value b,.t-brush span').text($(this).val()+'pt');
+	});
 
 	$('[data-step]').on('click', function(){
 

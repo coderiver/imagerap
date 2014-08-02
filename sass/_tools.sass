@@ -33,7 +33,7 @@
 		color: #000  
 		text-align: left
 		position: relative
-		margin: 0 12px !important
+		margin: 0 10px !important
 		&:before
 			+svg(blackarrow,9,5)
 			content: ' '
@@ -98,7 +98,7 @@
 			  
 .zoom
 	width: 20px 
-	height: 150px 
+	height: 150px  - 50px
 	position: relative
 	margin-bottom: 20px 
 	.zoom__in
@@ -117,7 +117,7 @@
 		overflow: hidden
 		width: 50px 
 		position: relative
-		height: 150px  
+		height: 150px   - 50px
 input[type=range].vertical
 	position: absolute
 	left: 6px
@@ -127,7 +127,7 @@ input[type=range].vertical
 	-webkit-appearance: slider-vertical
 	// border: 1px solid #474747 
 	height: 2px
-	width: 150px
+	width: 150px - 50px
 	background: #777777 
 	-webkit-appearance: none
 	border-radius: 10px
@@ -147,7 +147,7 @@ input[type=range].vertical
 		&:before
 			content: ' '
 			position: absolute
-			width: 150px 
+			width: 150px  - 50px
 			height: 4px 
 			background: #CCCCCC 
 			bottom: 3px
@@ -191,7 +191,43 @@ input[type=range].vertical
 	.brushes__thick
 		padding-top: 7px 
 		clear: both
+		width: 100%
 
+	.brushes__brush
+		width: 100% 
+		position: absolute
+		left: 0
+		top: 0
+		opacity: 0
+		z-index: 10 
+	.brushes__value
+		font-size: 11px 
+		color: #8A8A8A
+		display: block
+		text-align: left
+		b
+			font-weight: normal
+			color: #CCCCCC 
+			font-weight: bold
+	.brushes__visual
+		overflow: hidden
+		width: 100%
+		position: relative
+		
+		height: 30px
+		svg
+			position: absolute
+			top: -80px 
+			left: 0 
+	.brushes__fill
+		overflow: hidden
+		position: absolute
+		left: 0
+		top: 0
+		height: 20px  
+		svg g g
+			fill: #79E6D2
+		
 
 // .tools svg g path
 // 	fill: red
