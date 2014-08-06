@@ -181,9 +181,40 @@
 		right: 10px
 		top: 8px 
 		+svg(comment,27,20)
+		cursor: pointer
 	&.is-green
 		.addcomment__icon
 			+svg(comments1,27,20)
+.search
+	margin: 13px 20px 25px 20px 
+	position: relative
+	textarea
+		border-style: none
+		background: #333333 
+		border-bottom: 1px solid #999 
+		padding: 5px 
+		width: 100%
+		min-height: 32px 
+		line-height: 22px 
+		+box
+		color: #CCCCCC
+		display: block
+		padding-right: 50px 
+		font-size: 13px   
+	.search__icon
+		position: absolute
+		right: 10px
+		top: 8px 
+		+svg(search,16,16)
+		cursor: pointer
+	.search__cancel
+		position: absolute
+		right: 0
+		bottom: -14px  
+		font-size: 10px 
+		color: #CCCCCC
+		cursor: pointer 
+
 .commentsmeta
 	+clr
 	margin-bottom: 20px 
