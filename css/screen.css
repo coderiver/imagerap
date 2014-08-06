@@ -23,6 +23,8 @@ body { font-family: "Montserrat", sans-serif; font-size: 12px; line-height: 1.4;
 
 *::-webkit-scrollbar { display: none; }
 
+.disabled, .is-disabled { opacity: 0.5 !important; cursor: default !important; }
+
 body { position: relative; min-width: 1000px; min-height: 780px; }
 
 .l-top { position: absolute; top: 0; left: 0; right: 0; height: 32px; z-index: 20; }
@@ -126,11 +128,11 @@ body { position: relative; min-width: 1000px; min-height: 780px; }
 .comments { background: #1c1c1c; position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: auto; }
 
 .thread { margin-bottom: 45px; position: relative; padding: 0 20px 0 20px; }
-.thread:before { position: absolute; left: 0; top: 0; height: 100%; width: 2px; background: #444444; content: " "; }
-.thread:hover:before { background: white; }
-.thread.is-new:before { background: #a3d136; }
 
-.comment { margin-bottom: 25px; }
+.comment { padding-bottom: 25px; position: relative; }
+.comment:before { position: absolute; left: -19px; top: 0; height: 100%; width: 2px; background: #444444; content: " "; }
+.comment:hover:before { background: white; }
+.comment.is-new:before { background: #a3d136; }
 .comment .comment__meta { *zoom: 1; color: #777777; margin-bottom: 7px; position: relative; }
 .comment .comment__meta:after { content: " "; display: table; clear: both; }
 .comment .comment__meta .comments__metaact { background: #1c1c1c; position: absolute; left: 50px; top: 0; height: 40px; line-height: 40px; width: 270px; padding-left: 2px; display: none; }
@@ -139,7 +141,7 @@ body { position: relative; min-width: 1000px; min-height: 780px; }
 .comment .comment__av { width: 40px; height: 40px; border-radius: 40px; border: 2px solid white; float: left; margin-right: 7px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3); background-size: cover; background-position: 50% 50%; }
 .comment .comment__mail { font-size: 13px; padding-top: 2px; }
 .comment .comment__date { font-size: 11px; margin-top: 3px; }
-.comment .comment__content { font-size: 13px; line-height: 18px; color: #cccccc; *zoom: 1; }
+.comment .comment__content { font-size: 13px; line-height: 18px; color: #cccccc; -ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; *zoom: 1; }
 .comment .comment__content:after { content: " "; display: table; clear: both; }
 .comment .comment__content img { float: left; margin-right: 12px; }
 .comment.is-author .comment__av { border-color: #a3d136; }
@@ -253,7 +255,7 @@ input[type=range].vertical::-webkit-slider-thumb:before { content: " "; position
 .brushes .brushes__fill { overflow: hidden; position: absolute; left: 0; top: 0; height: 20px; }
 .brushes .brushes__fill svg g g { fill: #79e6d2; }
 
-.files { position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding: 12px 15px 10px 36px; }
+.files { position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding: 12px 15px 10px 36px; overflow: auto; }
 .files .files__title { font-size: 13px; text-transform: uppercase; color: #cccccc; line-height: 1; margin-bottom: 5px; }
 .files .files__meta { margin-bottom: 28px; }
 .files .files__meta .btn { margin-right: 6px; }
@@ -267,9 +269,9 @@ input[type=range].vertical::-webkit-slider-thumb:before { content: " "; position
 .file .file__content { overflow: hidden; }
 .file h4 { font-weight: normal; font-size: 13px; color: #999999; font-weight: normal; margin-bottom: 3px; display: block; }
 .file .file__date, .file .file__comments { font-size: 11px; color: #777777; margin-bottom: 11px; line-height: 1; }
-.file:hover .file__pic { position: relative; }
-.file:hover .file__pic:before { position: absolute; top: 0; left: 0; right: 0; bottom: 0; content: " "; border: 2px solid #50b7e0; }
-.file:hover h4 { color: #50b7e0; }
+.file:hover .file__pic, .file.is-active .file__pic { position: relative; }
+.file:hover .file__pic:before, .file.is-active .file__pic:before { position: absolute; top: 0; left: 0; right: 0; bottom: 0; content: " "; border: 2px solid #50b7e0; }
+.file:hover h4, .file.is-active h4 { color: #50b7e0; }
 
 .pic__wrap { display: inline-block; position: relative; -webkit-transition: all 0.1s linear; -moz-transition: all 0.1s linear; -o-transition: all 0.1s linear; transition: all 0.1s linear; }
 .pic__wrap .pic__area { position: absolute; border: 2px solid black; background: green; }

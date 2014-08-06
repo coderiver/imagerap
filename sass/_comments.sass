@@ -30,9 +30,14 @@
 	margin-bottom: 45px 
 	position: relative
 	padding: 0 20px 0 20px 
+	
+
+.comment
+	padding-bottom: 25px 
+	position: relative
 	&:before
 		position: absolute
-		left: 0
+		left: -19px
 		top: 0
 		height: 100%   
 		width: 2px 
@@ -44,9 +49,6 @@
 	&.is-new
 		&:before
 			background: #A3D136 
-
-.comment
-	margin-bottom: 25px 
 	.comment__meta
 		+clr
 		color: #777777 
@@ -93,6 +95,7 @@
 		font-size: 13px 
 		line-height: 18px
 		color: #CCCCCC
+		+prevent-text
 		+clr
 		img
 			float: left
