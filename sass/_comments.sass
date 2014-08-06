@@ -55,14 +55,14 @@
 		.comments__metaact
 			background: #1C1C1C
 			position: absolute
-			left: 50px  + 100px
+			left: 50px
 			top: 0
 			height: 40px 
 			line-height: 40px
 			width: 270px 
 			// +transition(all .1s ease)
-			opacity: 0 
-			z-index: -1 
+			padding-left: 2px 
+			display: none
 			a
 				font-size: 10px 
 				color: #CCCCCC
@@ -72,9 +72,7 @@
 				
 		&:hover
 			.comments__metaact
-				left: 52px 
-				opacity: 1 
-				z-index: 1 
+				display: block
 	.comment__av
 		width: 40px 
 		height: 40px 
