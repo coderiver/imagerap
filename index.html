@@ -19,8 +19,68 @@
 		<!-- begin user  -->
 		<div class="users">
 			<ul>
-				<li><a href="#">Export</a></li>
-				<li><a href="#">Hot Keys</a></li>
+				<li class="users__export"><a href="#">Export</a>
+					<div class="drop">
+						<ul class="listdownloads">
+							<li><a href="#"><i></i>Avid Markers</a></li>
+							<li><a href="#"><i></i>FCP X Markers</a></li>
+							<li><a href="#"><i></i>FCP 7 Markers</a></li>
+							<li><a href="#"><i></i>XMP Markers</a></li>
+							<li><a href="#"><i></i>PDF</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#">Hot Keys</a>
+					<div class="drop drop_big">
+						<div class="drop__header">
+							Hotkeys
+						</div>
+						<div class="drop__content">
+							<div class="drop__col">
+								<table>
+									<tr>
+										<th><div class="key">0</div></th>
+										<td>— Volume up</td>
+									</tr>
+									<tr>
+										<th><div class="key">9</div></th>
+										<td>— Volume down</td>
+									</tr>
+									<tr>
+										<th><div class="key">Space</div></th>
+										<td>— Play/Pause</td>
+									</tr>
+									<tr>
+										<th><div class="key">←</div></th>
+										<td>— Previous frame</td>
+									</tr>
+									<tr>
+										<th><div class="key">→</div></th>
+										<td>— Next frame</td>
+									</tr>
+								</table>
+							</div>
+							<div class="drop__col">
+								<table>
+									<tr>
+										<th><div class="key">⇧</div><span class="key__connect">+</span><div class="key">→</div></th>
+										<td>— Play faster</td>
+									</tr>
+									<tr>
+										<th><div class="key">⇧</div><span class="key__connect">+</span><div class="key">←</div></th>
+										<td>— Play slower</td>
+									</tr>
+									<tr>
+										<th><div class="key">F</div><span class="key__connect">or</span><div class="key">↩</div></th>
+										<td>— Fullscreen</td>
+									</tr>
+								</table>
+							</div>
+
+						</div>
+					</div>
+					<!-- end drop -->
+				</li>
 				<li><a href="#">Feedback</a></li>
 				<li>
 
@@ -360,6 +420,12 @@
 						<div class="comment__av" style="background-image: url(http://placekitten.com/40/40)"></div>
 						<div class="comment__mail">michael.potts@sonymcs.com</div>
 						<div class="comment__date">May 12, 2014 at 15:02</div>
+						<div class="comments__metaact">
+							<a href="#">edit</a>
+							<a href="#">share</a>
+							<a href="#">Delete</a>
+							
+						</div>
 					</div>
 					<div class="comment__content">
 						<img src="img/i.jpg" alt="">
@@ -445,6 +511,21 @@
 </div>
 <!-- end l-middle -->
 
+
+<!-- begin shareme -->
+<div class="shareme" style="right: 100px;top: 300px">
+	<div class="shareme__pic">
+		<img src="img/pic.png" alt="">
+	</div>
+	<div class="shareme__form">
+		<p>Really love the scene. The energy and smiles just look great. Don't we need post prod on the dices area?</p>
+		<div class="shareme__row"><input type="text" name="" placeholder='Emails…' id=""></div>
+		<div class="shareme__row"><input type="text" name="" placeholder='Subject…' id=""></div>
+		<div class="shareme__row"><textarea placeholder='Quick note…' id=""></textarea></div>
+		<input type="submit" class="shareme__submit" value="SHARE COMMENT">
+	</div>
+</div>
+<!-- end shareme -->
 
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>

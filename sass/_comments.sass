@@ -51,6 +51,30 @@
 		+clr
 		color: #777777 
 		margin-bottom: 7px 
+		position: relative
+		.comments__metaact
+			background: #1C1C1C
+			position: absolute
+			left: 50px  + 100px
+			top: 0
+			height: 40px 
+			line-height: 40px
+			width: 270px 
+			// +transition(all .1s ease)
+			opacity: 0 
+			z-index: -1 
+			a
+				font-size: 10px 
+				color: #CCCCCC
+				text-decoration: none  
+				margin-right: 10px 
+				text-transform: uppercase
+				
+		&:hover
+			.comments__metaact
+				left: 52px 
+				opacity: 1 
+				z-index: 1 
 	.comment__av
 		width: 40px 
 		height: 40px 
@@ -78,6 +102,61 @@
 	&.is-author
 		.comment__av
 			border-color: #A3D136 
+.shareme
+	position: absolute
+	background: #000
+	border-radius: 6px
+	padding: 15px  
+	width: 557px 
+	z-index: 9999 
+	+clr
+	&:before
+		position: absolute
+		right: 20px 
+		background: #000
+		width: 10px  
+		height: 10px 
+		+transform(rotate(45deg))
+		content: ' '
+		top: -5px 
+	.shareme__pic
+		float: left
+		margin-right: 17px 
+		img
+			display: block
+	.shareme__form
+		overflow: hidden
+		p
+			font-size: 13px 
+			line-height: 18px 
+			color: #CCCCCC 
+			margin-bottom: 13px 
+		.shareme__row
+			margin-bottom: 12px 
+		input[type="text"],textarea
+			background: #333333 
+			padding: 7px 5px 
+			border: none
+			border-bottom: 1px solid #999 
+			+box
+			width: 100%
+			font-size: 13px 
+			color: #CCCCCC 
+			+placeholder-color(#CCCCCC)
+			+transition(background .2s ease)
+			&:focus
+				background: lighter(#333333, 20%)
+
+		textarea
+			height: 110px 
+		input[type="submit"]
+			font-weight: bold
+			background: transparent
+			color: #CCCCCC
+			text-transform: uppercase
+			border: none
+			font-size: 13px   
+
 .addcomment
 	display: block
 	position: relative
