@@ -182,6 +182,8 @@
 		top: 8px 
 		+svg(comment,27,20)
 		cursor: pointer
+	textarea:focus+.addcomment__icon
+		+svg(comments1,27,20)
 	&.is-green
 		.addcomment__icon
 			+svg(comments1,27,20)
@@ -263,4 +265,18 @@
 		margin-right: 20px 
 		position: relative
 		top: 1px 
-			
+.seemoreless-toggle
+	display: none
+.seemoreless
+	text-decoration: none
+	color: #eee
+	display: inline-block
+	margin-top: 10px  
+	span+span
+		display: none
+	&.is-active
+		span
+			display: none
+		span+span
+			display: inline
+		

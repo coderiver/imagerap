@@ -165,6 +165,7 @@ body { position: relative; min-width: 1000px; min-height: 780px; }
 .addcomment.addcomment_main { margin: 13px 20px 20px 20px; }
 .addcomment textarea { border-style: none; background: #333333; border-bottom: 1px solid #999999; padding: 5px; width: 100%; min-height: 32px; line-height: 22px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; color: #cccccc; display: block; padding-right: 50px; font-size: 13px; }
 .addcomment .addcomment__icon { position: absolute; right: 10px; top: 8px; background: url("../img/icons/comment.svg") no-repeat 0 0; -moz-background-size: 27px 20px 100%; -webkit-background-size: 27px 20px 100%; background-size: 27px 20px 100%; width: 27px; height: 20px; display: inline-block; cursor: pointer; }
+.addcomment textarea:focus + .addcomment__icon { background: url("../img/icons/comments1.svg") no-repeat 0 0; -moz-background-size: 27px 20px 100%; -webkit-background-size: 27px 20px 100%; background-size: 27px 20px 100%; width: 27px; height: 20px; display: inline-block; }
 .addcomment.is-green .addcomment__icon { background: url("../img/icons/comments1.svg") no-repeat 0 0; -moz-background-size: 27px 20px 100%; -webkit-background-size: 27px 20px 100%; background-size: 27px 20px 100%; width: 27px; height: 20px; display: inline-block; }
 
 .search, .editcomment { margin: 13px 20px 25px 20px; position: relative; }
@@ -184,6 +185,13 @@ body { position: relative; min-width: 1000px; min-height: 780px; }
 .commentsmeta .commentsmeta__new i { background: url("../img/icons/refresh.svg") no-repeat 0 0; -moz-background-size: 14px 19px 100%; -webkit-background-size: 14px 19px 100%; background-size: 14px 19px 100%; width: 14px; height: 19px; display: inline-block; width: 15px; height: 18px; margin-right: 5px; position: relative; top: -3px; vertical-align: middle; }
 .commentsmeta .commentsmeta__search { float: right; background: url("../img/icons/search.svg") no-repeat 0 0; -moz-background-size: 16px 16px 100%; -webkit-background-size: 16px 16px 100%; background-size: 16px 16px 100%; width: 16px; height: 16px; display: inline-block; }
 .commentsmeta .select { float: right; margin-right: 20px; position: relative; top: 1px; }
+
+.seemoreless-toggle { display: none; }
+
+.seemoreless { text-decoration: none; color: #eeeeee; display: inline-block; margin-top: 10px; }
+.seemoreless span + span { display: none; }
+.seemoreless.is-active span { display: none; }
+.seemoreless.is-active span + span { display: inline; }
 
 .pic { position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: auto; text-align: center; }
 

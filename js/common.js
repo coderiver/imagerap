@@ -97,4 +97,9 @@ head.ready(function() {
 	$('.link').click(function(event) {
 		$(this).toggleClass('is-active');
 	});
+	$(".seemoreless").click(function(event) {
+		event.preventDefault();
+		$(this).prev().children('.seemoreless-toggle').toggle();
+		$(this).toggleClass('is-active')
+	});
 });
