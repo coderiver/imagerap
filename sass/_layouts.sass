@@ -74,7 +74,7 @@ body
 			margin-top: -4px 
 			margin-left: -4px 
 	.is-commentshidden &
-		+transform(translate(346px,0))
+		+transform(translate(348px,0))
 		.l-comments__toggle
 			&:before
 				+transform(rotate(180deg))
@@ -126,6 +126,8 @@ body
 	.l-view_2
 		.l-view__wrap
 			left: 40px 		
+	.l-comments
+		z-index: 1 
 	
 .is-one
 	.l-comments
@@ -133,6 +135,9 @@ body
 	.l-view
 		right: 0 
 .is-two
+	.l-comments
+		display: block
+		z-index: 1000 
 	.l-view
 		width: 50%
 	.l-view_1

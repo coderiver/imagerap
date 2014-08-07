@@ -65,20 +65,24 @@
 			display: block !important
 			padding: 0
 			margin: 0
-			a
+			position: relative
+			.listdownloads__link
 				margin: 0   
 				font-size: 13px 
 				font-weight: bold
 				color: #CCCCCC
 				text-decoration: none
-				padding-left: 40px  
+				margin-left: 40px  
 				position: relative
-				&:before
-					position: absolute
-					left: 9px 
-					top: 6px
-					content: ' ' 
-					+svg(bul1,21,21)
+				&:hover
+					color: #fff 
+			.listdownloads__icon
+				position: absolute
+				left: 9px 
+				top: 6px
+				content: ' ' 
+				+svg(bul1,21,21)
+				margin: 0 
 	&.drop_big
 		width: 502px 
 		padding: 0

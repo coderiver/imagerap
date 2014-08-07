@@ -49,6 +49,17 @@
 	&.is-new
 		&:before
 			background: #A3D136 
+	&.is-editing
+		.comment__content
+			font-size: 0
+			color: #000 
+			p
+				margin: 0
+				height: 0
+				overflow: hidden  
+		.editcomment
+			display: block
+			font-size: 13px 
 	.comment__meta
 		+clr
 		color: #777777 
