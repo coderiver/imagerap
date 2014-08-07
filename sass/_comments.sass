@@ -214,7 +214,27 @@
 		font-size: 10px 
 		color: #CCCCCC
 		cursor: pointer 
-
+.editcomment
+	@extend .search
+	margin: 0 -5px
+	textarea
+		font-size: 13px 
+		line-height: 18px
+		color: #CCCCCC
+		+prevent-text
+	.editcomment__submit
+		+svg(comments1,27,20)
+		position: absolute
+		right: 10px
+		bottom: 4px 
+		cursor: pointer
+	.editcomment__cancel
+		position: absolute
+		right: 0
+		bottom: -14px  
+		font-size: 10px 
+		color: #CCCCCC
+		cursor: pointer 
 .commentsmeta
 	+clr
 	margin-bottom: 20px 

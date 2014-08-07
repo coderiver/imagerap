@@ -167,10 +167,15 @@ body { position: relative; min-width: 1000px; min-height: 780px; }
 .addcomment .addcomment__icon { position: absolute; right: 10px; top: 8px; background: url("../img/icons/comment.svg") no-repeat 0 0; -moz-background-size: 27px 20px 100%; -webkit-background-size: 27px 20px 100%; background-size: 27px 20px 100%; width: 27px; height: 20px; display: inline-block; cursor: pointer; }
 .addcomment.is-green .addcomment__icon { background: url("../img/icons/comments1.svg") no-repeat 0 0; -moz-background-size: 27px 20px 100%; -webkit-background-size: 27px 20px 100%; background-size: 27px 20px 100%; width: 27px; height: 20px; display: inline-block; }
 
-.search { margin: 13px 20px 25px 20px; position: relative; }
-.search textarea { border-style: none; background: #333333; border-bottom: 1px solid #999999; padding: 5px; width: 100%; min-height: 32px; line-height: 22px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; color: #cccccc; display: block; padding-right: 50px; font-size: 13px; }
-.search .search__icon { position: absolute; right: 10px; top: 8px; background: url("../img/icons/search.svg") no-repeat 0 0; -moz-background-size: 16px 16px 100%; -webkit-background-size: 16px 16px 100%; background-size: 16px 16px 100%; width: 16px; height: 16px; display: inline-block; cursor: pointer; }
-.search .search__cancel { position: absolute; right: 0; bottom: -14px; font-size: 10px; color: #cccccc; cursor: pointer; }
+.search, .editcomment { margin: 13px 20px 25px 20px; position: relative; }
+.search textarea, .editcomment textarea { border-style: none; background: #333333; border-bottom: 1px solid #999999; padding: 5px; width: 100%; min-height: 32px; line-height: 22px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; color: #cccccc; display: block; padding-right: 50px; font-size: 13px; }
+.search .search__icon, .editcomment .search__icon { position: absolute; right: 10px; top: 8px; background: url("../img/icons/search.svg") no-repeat 0 0; -moz-background-size: 16px 16px 100%; -webkit-background-size: 16px 16px 100%; background-size: 16px 16px 100%; width: 16px; height: 16px; display: inline-block; cursor: pointer; }
+.search .search__cancel, .editcomment .search__cancel { position: absolute; right: 0; bottom: -14px; font-size: 10px; color: #cccccc; cursor: pointer; }
+
+.editcomment { margin: 0 -5px; }
+.editcomment textarea { font-size: 13px; line-height: 18px; color: #cccccc; -ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; }
+.editcomment .editcomment__submit { background: url("../img/icons/comments1.svg") no-repeat 0 0; -moz-background-size: 27px 20px 100%; -webkit-background-size: 27px 20px 100%; background-size: 27px 20px 100%; width: 27px; height: 20px; display: inline-block; position: absolute; right: 10px; bottom: 4px; cursor: pointer; }
+.editcomment .editcomment__cancel { position: absolute; right: 0; bottom: -14px; font-size: 10px; color: #cccccc; cursor: pointer; }
 
 .commentsmeta { *zoom: 1; margin-bottom: 20px; margin-left: 20px; margin-right: 20px; }
 .commentsmeta:after { content: " "; display: table; clear: both; }
