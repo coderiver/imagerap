@@ -218,7 +218,7 @@ body { position: relative; min-width: 1000px; min-height: 780px; }
 .preview .preview__zoom .zoom input { width: 240px; }
 .preview .preview__zoom .zoom input::-webkit-slider-thumb:before { width: 320px; }
 .preview .preview__meta { position: absolute; height: 24px; top: -60px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-left: 5px; border-bottom: 1px solid #777777; width: 100%; background: #242526; }
-.preview .preview__wrappic { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+.preview .preview__wrappic { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: black; }
 .preview .preview__area { position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 2px solid #f7e53b; cursor: move; z-index: 3; }
 .preview .preview__title, .preview .preview__showpreview { position: absolute; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 5px; height: 30px; line-height: 30px; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; font-size: 11px; color: #999994; background: #171717; top: -30px; width: 100%; z-index: 1; cursor: pointer; }
 .preview .preview__title i, .preview .preview__showpreview i { background: url("../img/icons/check.svg") no-repeat 0 0; -moz-background-size: 12px 10px 100%; -webkit-background-size: 12px 10px 100%; background-size: 12px 10px 100%; width: 12px; height: 10px; display: inline-block; vertical-align: middle; margin-right: 5px; position: relative; top: -2px; }
