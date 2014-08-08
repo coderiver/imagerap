@@ -161,7 +161,8 @@
 				</div>
 				<!-- begin search  -->
 				<div class="search search_files">
-					<textarea rows="1" placeholder="Search for…"></textarea>
+					<!-- <textarea rows="1" placeholder="Search for…"></textarea> -->
+					<input type="text" name="" id="">
 					<div class="search__icon"></div>
 					<div class="search__cancel">Cancel</div>
 				</div>
@@ -308,7 +309,10 @@
 		<!-- begin pic  -->
 		<div class="pic">
 
-			<div class="pic__wrap"><img src="img/pic.jpg" alt=""></div>
+			<div class="pic__wrap">
+				<img src="img/pic.jpg" alt="">
+				<div class="svgoverlay"></div>
+			</div>
 			
 		</div>
 		<!-- end pic -->
@@ -319,7 +323,11 @@
 				<div class="preview__title">Somelongname.tiff</div>
 				<div class="preview__showpreview"><span>Hide</span><span>Show</span> miniature</div>
 			</div>
-			<img src="img/small.jpg" alt="">
+			<div class="preview__wrappic">
+				<img src="img/small.jpg" alt="">
+				<div class="svgoverlay"></div>
+			</div>
+			
 			<div class="preview__area"></div>
 		</div>
 		<!-- end preview -->
@@ -477,7 +485,8 @@
 			<!-- end addcomment -->
 			<!-- begin search  -->
 			<div class="search">
-				<textarea rows="1" placeholder="Search for…"></textarea>
+				<!-- <textarea rows="1" placeholder="Search for…"></textarea> -->
+				<input type="text" name="" id="" placeholder="Search for…">
 				<div class="search__icon"></div>
 				<div class="search__cancel">Cancel</div>
 			</div>
@@ -527,7 +536,10 @@
 						<div class="comment__date">May 12, 2014 at 15:02</div>
 					</div>
 					<div class="comment__content">
-						<img src="img/i.jpg" alt="">
+						<div class="comment__pic">
+							<img src="img/i.jpg" alt="">
+							<div class="svgoverlay"></div>
+						</div>
 						<p>No man. I think that's good enough. Let's keep it the way it is.</p>
 					</div>
 					

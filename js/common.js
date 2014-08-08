@@ -102,4 +102,8 @@ head.ready(function() {
 		$(this).prev().children('.seemoreless-toggle').toggle();
 		$(this).toggleClass('is-active')
 	});
+	$('.commentsmeta__search, .comments .search__cancel').click(function(event) {
+		event.preventDefault();
+		$('.comments').toggleClass('is-searchvisible');
+	});
 });

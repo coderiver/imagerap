@@ -108,9 +108,14 @@
 		color: #CCCCCC
 		+prevent-text
 		+clr
-		img
+		.comment__pic
 			float: left
 			margin-right: 12px 
+			position: relative
+			img
+				max-width: 100px 
+				max-height: 200px 
+				display: block
 	&.is-author
 		.comment__av
 			border-color: #A3D136 
@@ -133,9 +138,11 @@
 		top: -5px 
 	.shareme__pic
 		float: left
-		margin-right: 17px 
+		margin-right: 17px
 		img
 			display: block
+			max-width: 100%
+			max-height: 500px  
 	.shareme__form
 		overflow: hidden
 		p
@@ -201,9 +208,12 @@
 .search
 	margin: 13px 20px 25px 20px 
 	position: relative
+	display: none
+	.is-searchvisible &
+		display: block
 	&.search_files
 		margin: 10px 0 0 0 
-	textarea
+	textarea,input[type="text"]
 		border-style: none
 		background: #333333 
 		border-bottom: 1px solid #999 
@@ -221,7 +231,6 @@
 		right: 10px
 		top: 8px 
 		+svg(search,16,16)
-		cursor: pointer
 	.search__cancel
 		position: absolute
 		right: 0
@@ -255,6 +264,10 @@
 	margin-bottom: 20px 
 	margin-left: 20px 
 	margin-right: 20px 
+	display: block
+	// margin-bottom: 40px 
+	.is-searchvisible &
+		display: none
 	.commentsmeta__new
 		cursor: pointer
 		font-weight: bold
@@ -271,6 +284,7 @@
 	.commentsmeta__search
 		float: right
 		+svg(search,16,16)
+		cursor: pointer
 	.select
 		float: right
 		margin-right: 20px 
