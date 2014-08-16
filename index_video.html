@@ -8,7 +8,7 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
-<body>
+<body class="videorap">
 
 <!-- begin l-top  -->
 <div class="l-top">
@@ -391,24 +391,8 @@
 						</svg>
 					</div>
 				</div>
-				<div class="tool tool_color">
-					<div class="t-canvas">
-						<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-						    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-						        <path d="M16.4127741,5.04317045 L7.58722586,5.04317045 L12,0 L16.4127741,5.04317045 Z M18.9568295,16.4127741 L18.9568295,7.58722586 L24,12 L18.9568295,16.4127741 Z M7.58722586,18.9568295 L16.4127741,18.9568295 L12,24 L7.58722586,18.9568295 Z M5.04317045,7.58722586 L5.04317045,16.4127741 L0,12 L5.04317045,7.58722586 Z M13.8911889,11.9775298 C13.8911889,10.933055 13.0444749,10.0863409 12,10.0863409 C10.9555251,10.0863409 10.1088111,10.933055 10.1088111,11.9775298 C10.1088111,13.0220047 10.9555251,13.8687187 12,13.8687187 C13.0444749,13.8687187 13.8911889,13.0220047 13.8911889,11.9775298 Z" id="Triangle-1-copy" fill="#777777" sketch:type="MSShapeGroup"></path>
-						    </g>
-						</svg>
-					</div>
-				</div>
-				<div class="tool tool_color">
-					<div class="t-search">
-						<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-						    <g  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-						        <path d="M15.2936828,18.1233244 L21.1779356,24.0334167 L23.9765288,21.2223116 L18.074229,15.3603661 C19.1253434,13.790069 19.7383388,11.9017226 19.7383388,9.87020335 C19.7383388,4.41233026 15.313859,-0.0121495864 9.85598587,-0.0121495864 C4.39811278,-0.0121495864 -0.0263670724,4.41233026 -0.0263670724,9.87020335 C-0.0263670724,15.3280764 4.39811278,19.7525563 9.85598587,19.7525563 C11.8649305,19.7525563 13.7338666,19.1531086 15.2936828,18.1233244 L15.2936828,18.1233244 Z M9.85598587,15.5172622 C12.9747705,15.5172622 15.5030447,12.988988 15.5030447,9.87020335 C15.5030447,6.75141873 12.9747705,4.22314453 9.85598587,4.22314453 C6.73720124,4.22314453 4.20892705,6.75141873 4.20892705,9.87020335 C4.20892705,12.988988 6.73720124,15.5172622 9.85598587,15.5172622 Z" id="Path-7-copy-3" fill="#777777" sketch:type="MSShapeGroup"></path>
-						    </g>
-						</svg>
-					</div>
-				</div>
+				
+				
 				<div class="tool ">
 					<div class="t-brush" style="background:#7DE5D2;"><span>5pt</span><i></i></div>
 					<div class="brushes is-active">
@@ -451,18 +435,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="notesandmarks is-active">Notes & marks<br><i class="is-state1"></i></div>
+				
 				<div class="tools__bottom">
-					<div class="zoom">
-						<div class="zoom__wrap">
-							<div class="zoom__in" data-step="1"></div>
-							<div class="zoom__range"><input value="1" type="range" min="1" max="10" class="vertical"></div>
-							<div class="zoom__out" data-step="-1"></div>
-						</div>
-					</div>
 					<div class="tool__wipe"><a href="#" class="btn">Wipe</a></div>
 					<div class="tool__wipe"><a href="#" class="btn">Undo</a></div>
-
 				</div>
 			</div>
 			<!-- end tools -->
@@ -607,6 +583,53 @@
 	</div>
 	<!-- end l-comments -->
 
+
+
+	<!-- begin l-controls  -->
+	<div class="l-controls">
+		<div class="timeline">
+			<div class="timeline__filmstrip"><img src="img/filmstrip.png" alt=""></div>
+			<div class="timeline__waveform" style="background: url(img/waveform.svg) no-repeat 0 100%;"></div>
+			<div class="timeline__theredthing"></div>
+			<div class="timeline__mark is-green" style="left: 20%"><i></i></div>
+			<div class="timeline__mark is-white" style="left: 30%"><i></i></div>
+			<div class="timeline__mark is-gray" style="left: 40%"><i></i></div>
+		</div>
+		<div class="likes">
+			<div class="likes__like"><i class="icon-like"></i>Like</div>
+			<div class="likes__dislike"><i class="icon-dislike"></i>Dislike</div>
+		</div>
+		<dl class="time">
+			<dt>Standard Timecode</dt>
+			<dd>04:01:32.140</dd>
+		</dl>
+		<dl class="time">
+			<dt>Tape Timecode</dt>
+			<dd>04:01:32.140</dd>
+		</dl>
+		<dl class="time">
+			<dt>Frame Number</dt>
+			<dd>2020</dd>
+		</dl>
+
+		<div class="controls">
+			<div class="controls__back"></div>
+			<div class="controls__playpause"></div>
+			<div class="controls__forw"></div>
+		</div>
+		<!-- begin volume -->
+		<div class="volume">
+			<div class="volume__title">Volume</div>
+			<div class="volume__wrap">
+				<div class="volume__in" data-step="1"></div>
+				<div class="volume__range"><input value="1" type="range" min="1" max="10" class="horizontal"></div>
+				<div class="volume__out" data-step="-1"></div>
+			</div>
+		</div>
+		<!-- end volume -->
+		
+	</div>
+	<!-- end l-controls -->
 </div>
 <!-- end l-middle -->
 

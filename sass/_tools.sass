@@ -121,7 +121,7 @@
 		width: 50px 
 		position: relative
 		height: 150px   - 50px
-input[type=range].vertical
+input[type=range].vertical,input[type=range].horizontal
 	position: absolute
 	left: 6px
 	+rotate(90)
@@ -155,7 +155,15 @@ input[type=range].vertical
 			background: #CCCCCC 
 			bottom: 3px
 			left: 2px 
-
+input[type=range].horizontal
+	+rotate(0)
+	left: 0
+	margin-left: 0
+	position: static
+	width: 230px   
+	&::-webkit-slider-thumb
+		&:before
+			width: 230px 
 .brushes
 	position: absolute
 	right: 8px
