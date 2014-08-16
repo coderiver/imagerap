@@ -2,7 +2,7 @@ body
 	position: relative
 	min-width: 1000px 
 	min-height: 780px 
-	
+$timeline: 165px
 .l-top
 	position: absolute
 	top: 0
@@ -56,6 +56,8 @@ body
 	bottom: 0  
 	z-index: 21 
 	+transition(all .2s linear)
+	.videorap &
+		bottom: $timeline 
 	.l-comments__toggle
 		position: absolute
 		width: 14px 
@@ -89,6 +91,8 @@ body
 	+transition(all .2s linear)
 	overflow: hidden
 	background: #242526 
+	.videorap &
+		bottom: $timeline 
 	.is-commentshidden &
 		right: 0 
 	.l-view__wrap
@@ -151,7 +155,7 @@ body
 .l-controls
 	position: absolute
 	bottom: 0
-	height: 165px  
+	height: $timeline 
 	background: #333333 
 	z-index: 30
 	width: 100%

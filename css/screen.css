@@ -41,12 +41,14 @@ body { position: relative; min-width: 1000px; min-height: 780px; }
 .l-files.is-visible { -webkit-transform: translate(0, 0); -moz-transform: translate(0, 0); -ms-transform: translate(0, 0); -o-transform: translate(0, 0); transform: translate(0, 0); }
 
 .l-comments { position: absolute; right: 0; width: 346px; right: 0; top: 0; bottom: 0; z-index: 21; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
+.videorap .l-comments { bottom: 165px; }
 .l-comments .l-comments__toggle { position: absolute; width: 14px; height: 30px; left: -14px; top: 0; background: #1c1c1c; border-top-left-radius: 3px; border-bottom-left-radius: 3px; cursor: pointer; }
 .l-comments .l-comments__toggle:before { position: absolute; left: 50%; top: 50%; background: url("../img/icons/arrv.svg") no-repeat 0 0; -moz-background-size: 7px 7px 100%; -webkit-background-size: 7px 7px 100%; background-size: 7px 7px 100%; width: 7px; height: 7px; display: inline-block; content: " "; margin-top: -4px; margin-left: -4px; }
 .is-commentshidden .l-comments { -webkit-transform: translate(348px, 0); -moz-transform: translate(348px, 0); -ms-transform: translate(348px, 0); -o-transform: translate(348px, 0); transform: translate(348px, 0); }
 .is-commentshidden .l-comments .l-comments__toggle:before { -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); }
 
 .l-view { position: absolute; left: 0; top: 0; right: 346px; bottom: 0; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; overflow: hidden; background: #242526; }
+.videorap .l-view { bottom: 165px; }
 .is-commentshidden .l-view { right: 0; }
 .l-view .l-view__wrap { position: absolute; top: 0; left: 0; bottom: 0; right: 0; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; transition: all 0.2s ease; }
 
@@ -337,6 +339,8 @@ input[type=range].horizontal::-webkit-slider-thumb:before { width: 230px; }
 .files .files__meta .btn { margin-right: 6px; }
 .files .files__get { display: inline-block; border-bottom: 1px solid #777777; height: 28px; line-height: 28px; padding-left: 22px; }
 .files .files__get .files__search { background: url("../img/icons/search.svg") no-repeat 0 0; -moz-background-size: 16px 16px 100%; -webkit-background-size: 16px 16px 100%; background-size: 16px 16px 100%; width: 16px; height: 16px; display: inline-block; margin-left: 5px; position: relative; top: 2px; cursor: pointer; }
+.files .files__get.files__get_wide { position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; }
+.files .files__get.files__get_wide .files__search { position: absolute; right: 0; bottom: 6px; top: auto; }
 
 .file { *zoom: 1; display: block; text-decoration: none; margin-bottom: 35px; color: #999999; }
 .file:after { content: " "; display: table; clear: both; }
@@ -345,6 +349,8 @@ input[type=range].horizontal::-webkit-slider-thumb:before { width: 230px; }
 .file .file__content { overflow: hidden; }
 .file h4 { font-weight: normal; font-size: 13px; color: #999999; font-weight: normal; margin-bottom: 3px; display: block; }
 .file .file__date, .file .file__comments { font-size: 11px; color: #777777; margin-bottom: 11px; line-height: 1; }
+.file .file__meta { font-size: 11px; color: #777777; margin-top: -8px; margin-bottom: 8px; }
+.file .file__meta span { margin-right: 7px; }
 .file:hover .file__pic, .file.is-active .file__pic { position: relative; }
 .file:hover .file__pic:before, .file.is-active .file__pic:before { position: absolute; top: 0; left: 0; right: 0; bottom: 0; content: " "; border: 2px solid #50b7e0; }
 .file:hover h4, .file.is-active h4 { color: #50b7e0; }

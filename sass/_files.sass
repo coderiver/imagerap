@@ -24,6 +24,15 @@
 			position: relative
 			top: 2px 
 			cursor: pointer
+		&.files__get_wide
+			position: relative
+			+box
+			width: 100% 
+			.files__search
+				position: absolute
+				right: 0
+				bottom: 6px  
+				top: auto
 		
 .file
 	+clr
@@ -51,6 +60,13 @@
 		color: #777777 
 		margin-bottom: 11px 
 		line-height: 1 
+	.file__meta
+		font-size: 11px 
+		color: #777777
+		margin-top: -8px  
+		margin-bottom: 8px 
+		span
+			margin-right: 7px 
 	&:hover,&.is-active
 		.file__pic
 			position: relative
